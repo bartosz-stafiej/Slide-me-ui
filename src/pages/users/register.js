@@ -26,11 +26,10 @@ export class Register extends React.Component {
   submitHandler = (element) => {
     element.preventDefault();
     console.log(this.state)
-    const localhostURL = 'http://localhost:3001/users'
     const apiUrl = 'https://slide-me.herokuapp.com/users'
 
     axios.post(
-      localhostURL,
+      apiUrl,
       { "user": this.state }
       )
       .then(response => {
